@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./App/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./App/js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./App/components/hello.js":
-/*!*********************************!*\
-  !*** ./App/components/hello.js ***!
-  \*********************************/
+/***/ "./App/js/components/hello.js":
+/*!************************************!*\
+  !*** ./App/js/components/hello.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Hello = function Hello() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    ' Hi! '\n  );\n};\n\nexports.default = Hello;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9BcHAvY29tcG9uZW50cy9oZWxsby5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9BcHAvY29tcG9uZW50cy9oZWxsby5qcz8yNzViIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBIZWxsbyA9ICgpID0+IDxkaXY+IEhpISA8L2Rpdj47XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWxsbztcclxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBOzs7OztBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./App/components/hello.js\n");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Hello = function Hello() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    ' Hi! '\n  );\n};\n\nexports.default = Hello;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9BcHAvanMvY29tcG9uZW50cy9oZWxsby5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9BcHAvanMvY29tcG9uZW50cy9oZWxsby5qcz9iYjYwIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBIZWxsbyA9ICgpID0+IDxkaXY+IEhpISA8L2Rpdj47XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIZWxsbztcclxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBOzs7OztBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./App/js/components/hello.js\n");
 
 /***/ }),
 
-/***/ "./App/index.js":
-/*!**********************!*\
-  !*** ./App/index.js ***!
-  \**********************/
+/***/ "./App/js/index.js":
+/*!*************************!*\
+  !*** ./App/js/index.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _hello = __webpack_require__(/*! ./components/hello */ \"./App/components/hello.js\");\n\nvar _hello2 = _interopRequireDefault(_hello);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_reactDom2.default.render(_react2.default.createElement(_hello2.default, null), document.getElementById('root'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9BcHAvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vQXBwL2luZGV4LmpzP2MzYTciXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSc7XHJcbmltcG9ydCBIZWxsbyBmcm9tICcuL2NvbXBvbmVudHMvaGVsbG8nO1xyXG5cclxuUmVhY3RET00ucmVuZGVyKDxIZWxsbyAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSk7XHJcbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7OztBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./App/index.js\n");
+eval("\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _hello = __webpack_require__(/*! ./components/hello */ \"./App/js/components/hello.js\");\n\nvar _hello2 = _interopRequireDefault(_hello);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_reactDom2.default.render(_react2.default.createElement(_hello2.default, null), document.getElementById('root'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9BcHAvanMvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vQXBwL2pzL2luZGV4LmpzPzAzYzEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSc7XHJcbmltcG9ydCBIZWxsbyBmcm9tICcuL2NvbXBvbmVudHMvaGVsbG8nO1xyXG5cclxuUmVhY3RET00ucmVuZGVyKDxIZWxsbyAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSk7XHJcbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7OztBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./App/js/index.js\n");
 
 /***/ }),
 
