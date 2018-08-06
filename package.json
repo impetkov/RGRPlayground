@@ -7,6 +7,10 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/impetkov/RGRPlayground.git"
+  },
   "dependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",

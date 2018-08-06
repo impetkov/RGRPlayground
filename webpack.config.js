@@ -1,8 +1,8 @@
 module.exports = {
-    entry: "./public/index.js",
+    entry: './App/index.js',
     output: {
-        path: __dirname + "/public",
-        filename: "bundle.js"
+        path: `${__dirname}/App`,
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -16,4 +16,4 @@ module.exports = {
             }
         ]
     }
-}
+};
