@@ -1,5 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/hello';
+import MedsResultsContainer from './components/MedsResultsContainer';
 
-ReactDOM.render(<Hello />, document.getElementById('root'));
+const root = document.getElementById('root');
+
+ReactDOM.render(
+    <MedsResultsContainer />,
+    root
+);

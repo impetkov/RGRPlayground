@@ -1,2 +1,3 @@
 node_modules/
-public/bundle.js
+App/public/bundle.js
+secret/mongoDbConnection.js
