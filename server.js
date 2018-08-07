@@ -1,5 +1,7 @@
 import express from 'express';
+import ExpressGraphQL from 'express-graphql';
 import { MongoClient } from 'mongodb';
+import schema from './App/data/schemas';
 import MONGODB_URL from './secret/mongoDbConnection';
 
 const app = express();
@@ -27,6 +29,12 @@ MongoClient.connect(MONGODB_URL, { useNewUrlParser: true }, (error, client) => {
     }
 
     db = client.db('oovesmongodb');
+
+    app.use('/graphql', ExpressGraphQL({
+        schema: schema(db),
+        graphiql: true
+    }));
+
     app.listen(1480, onListen);
 });
 

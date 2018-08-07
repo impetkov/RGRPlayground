@@ -3,24 +3,46 @@
         "airbnb-base",
         "plugin:react/recommended"
     ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        }
+    },
     "rules": {
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        "no-param-reassign": "off",
+        "unicode-bom": "off",
+        "linebreak-style": "off",
         "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/jsx-indent": [
             "error",
             4
         ],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/react-in-jsx-scope": "error",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "eol-last": "off",
         "comma-dangle": [
             "error",
             "never"
         ],
-        "class-methods-use-this": [
-            0
-        ],
-        "eol-last":[
-            0
-        ]
-    }
+        "no-irregular-whitespace": "off",
+        "max-len": "off",
+        "global-require": "off",
+        "import/prefer-default-export": "off"
+    },
+    "plugins": [
+        "react"
+    ]
 }

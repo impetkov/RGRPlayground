@@ -1,10 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MedsResultsRow = ({ medName }) => <li>{medName}</li>;
+const MedsResultsRow = ({ name, description, expirationDate }) => <li>
+    <div>
+        {name}
+        <br/>
+        {description}
+        <br/>
+        {expirationDate}
+    </div>
+</li>;
 
 MedsResultsRow.propTypes = {
-    medName: PropTypes.string
+    name: PropTypes.string,
+    description: PropTypes.string,
+    expirationDate: PropTypes.string
 };
 
 export default MedsResultsRow;

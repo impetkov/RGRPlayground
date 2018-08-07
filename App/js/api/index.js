@@ -1,4 +1,4 @@
-import { get } from 'jquery';
+import { post } from 'jquery';
 import ServerActions from '../actions';
 
 const onMedsRetrieved = (response) => {
@@ -6,7 +6,15 @@ const onMedsRetrieved = (response) => {
 };
 
 const getMeds = () => {
-    get('/data/meds').done(response => onMedsRetrieved(response));
+    post('/graphql', {
+        query: `{
+            meds {
+            name
+            description
+            expidationDate
+          }
+        }`
+    }).done(response => onMedsRetrieved(response.data.meds));
 };
 
 export default getMeds;

@@ -10,12 +10,12 @@ class MedsStore extends EventEmitter {
 
         AppDispatcher.register((action) => {
             switch (action.actionType) {
-            case MEDS_RECEIVED:
-                meds = action.meds;
-                this.emit('change');
-                break;
-            default:
-                break;
+                case MEDS_RECEIVED:
+                    meds = action.meds;
+                    this.emit('change');
+                    break;
+                default:
+                    break;
             }
         });
     }
