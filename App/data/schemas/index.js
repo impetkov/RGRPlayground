@@ -5,7 +5,7 @@ import {
     GraphQLList
 } from 'graphql';
 
-const schema = (db) => {
+const Schema = (db) => {
     const medType = new GraphQLObjectType({
         name: 'MedType',
         fields: () => ({
@@ -26,24 +26,10 @@ const schema = (db) => {
         })
     };
 
-    // const SimpleMutation = {
-    //     name: 'SimpleMutation',
-    //     fields: () => ({
-    //         incrementCounter: {
-    //             type: GraphQLInt,
-    //             resolve: () => {
-    //                 fortyTwo += 1;
-    //                 return fortyTwo;
-    //             }
-    //         }
-    //     })
-    // };
-
     const graphSchema = new GraphQLSchema({
         query: new GraphQLObjectType(MedsQuery)
-        // mutation: new GraphQLObjectType(SimpleMutation)
     });
 
     return graphSchema;
 };
-export default schema;
+export default Schema;

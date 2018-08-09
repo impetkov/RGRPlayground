@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'react-relay';
 import MedsResultsHeader from './MedsResultsHeader';
 import MedsResultsList from './MedsResultsList';
 import getMeds from '../api';
@@ -7,19 +8,20 @@ import MedsStore from '../stores';
 const getAppState = () => ({ meds: MedsStore.getAllMeds() });
 
 class MedsResultsContainer extends React.Component {
-    constructor(props) {
-        super(props);
+    state = getAppState();
 
-        this.state = getAppState();
-        this.onChange = this.onChange.bind(this);
-    }
-
-    onChange() {
+    onChange = () => {
         this.setState(getAppState());
     }
 
     componentDidMount() {
         getMeds();
+        //     console.log(graphql`
+        // query MedsResultsContainerMedsQuery {
+        //     meds {
+        //       name          
+        //     }
+        //   }`);
         MedsStore.on('change', this.onChange);
     }
 
@@ -30,7 +32,7 @@ class MedsResultsContainer extends React.Component {
     render() {
         return (<div>
             <MedsResultsHeader />
-            <MedsResultsList meds={this.state.meds}/>
+            <MedsResultsList meds={this.state.meds} limit={2} />
         </div>);
     }
 }

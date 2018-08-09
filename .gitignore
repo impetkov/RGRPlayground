@@ -1,3 +1,4 @@
 node_modules/
 App/public/bundle.js
 secret/mongoDbConnection.js
+App/data/schemas/schema.json

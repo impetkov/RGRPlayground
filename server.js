@@ -1,7 +1,10 @@
 import express from 'express';
 import ExpressGraphQL from 'express-graphql';
 import { MongoClient } from 'mongodb';
-import schema from './App/data/schemas';
+import { graphql } from 'graphql';
+import { introspectionQuery } from 'graphql/utilities';
+import fs from 'fs';
+import Schema from './App/data/schemas';
 import MONGODB_URL from './secret/mongoDbConnection';
 
 const app = express();
@@ -12,30 +15,24 @@ const onListen = () => {
     console.log('Listening to port 1480');
 };
 
-let db = {};
-const onGetMeds = (response) => {
-    db.collection('meds').find({}).toArray((err, meds) => {
-        if (err) {
-            throw err;
-        }
+(async () => {
+    const client = await MongoClient.connect(MONGODB_URL, { useNewUrlParser: true });
 
-        response.json(meds);
-    });
-};
-
-MongoClient.connect(MONGODB_URL, { useNewUrlParser: true }, (error, client) => {
-    if (error) {
-        throw error;
-    }
-
-    db = client.db('oovesmongodb');
-
+    const db = client.db('oovesmongodb');
+    const schema = Schema(db);
     app.use('/graphql', ExpressGraphQL({
-        schema: schema(db),
+        schema,
         graphiql: true
     }));
 
     app.listen(1480, onListen);
-});
 
-app.get('/data/meds', (_, response) => onGetMeds(response));
+    // const schemaJson = await graphql(schema, introspectionQuery);
+    // fs.writeFile('./App/data/schemas/schema.json', JSON.stringify(schemaJson), (error) => {
+    //     if (error) {
+    //         throw error;
+    //     }
+
+    //     console.log('schema Json created');
+    // });
+})();
